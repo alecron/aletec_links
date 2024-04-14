@@ -3,7 +3,7 @@ import Icon from './icons'
 import Button from './button'
 import UserImages from './user_images'
 export default function UserInfo() {
-  const { name, images, bio, buttons, location, website } = data
+  const { name, images, bio, buttons, location, website, contact } = data
   return (
     <div className="flex flex-col items-center justify-center space-y-6 rounded-2xl bg-white px-4 pt-4 pb-6">
       <div className="mb-12">
@@ -16,10 +16,13 @@ export default function UserInfo() {
         </h1>
         <p className="font-medium text-stone-500">{bio}</p>
       </div>
-      <div className="flex space-x-3">
+      {buttons.display && <div className="flex space-x-3">
         {buttons.display && buttons.items.map((item, index) => <Button key={index} item={item} />)}
+      </div>}
+      <div className="px-4 text-center">
+        <p className="font-small text-stone-500 italic">{contact}</p>
       </div>
-      {website && (
+      {/* {website && (
         <a
           href={'https://' + website}
           target="_blank"
@@ -29,7 +32,7 @@ export default function UserInfo() {
           {website}
           <Icon label="externallink" />
         </a>
-      )}
+      )} */}
     </div>
   )
 }
