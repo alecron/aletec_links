@@ -43,6 +43,10 @@
     "display": true,
     "items": [
       {
+        "label": "Youtube",
+        "url": "https://www.youtube.com/@AleTecnstuff"
+      },
+      {
         "label": "Twitter",
         "url": "https://www.X.com/aletecnstuff"
       },
@@ -57,10 +61,6 @@
       {
         "label": "Linkedin",
         "url": "https://www.linkedin.com/in/amagallon"
-      },
-      {
-        "label": "Youtube",
-        "url": "https://www.youtube.com"
       }
     ]
   },
